@@ -32,93 +32,162 @@
     </div>
   </section>
 
- <!-- FILTER BUTTONS -->
-  <section class="product-filters">
-    <h2>Explore Our Categories</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="packing">Packing</button>
-      <button class="filter-btn" data-filter="double">Double Side</button>
-      <button class="filter-btn" data-filter="insulation">Insulation</button>
-      <button class="filter-btn" data-filter="protection">Protection</button>
-    </div>
-  </section>
+<!-- FILTER BUTTONS -->
+<section class="product-filters">
+  <h2>Explore Our Categories</h2>
+  <div class="filter-buttons">
 
-  <!-- PRODUCT GRID -->
-  <section class="product-grid">
-    <!-- Packing Products -->
-    <div class="product-card" data-category="packing">
-      <img src="images/packing-tape.jpg" alt="Packing Tape">
-      <h3>Brown Packing Tape</h3>
-      <p>Durable tape ideal for heavy-duty carton sealing.</p>
-    </div>
-
-    <div class="product-card" data-category="packing">
-      <img src="images/clear-packing.jpg" alt="Clear Packing Tape">
-      <h3>Clear Packing Tape</h3>
-      <p>Transparent finish for a neat, professional look.</p>
-    </div>
-
-    <!-- Double Side -->
-    <div class="product-card" data-category="double">
-      <img src="images/double-tape.jpg" alt="Double Tape">
-      <h3>Foam Double Side Tape</h3>
-      <p>Provides extra grip for mounting and crafts.</p>
+    <!-- Packing Dropdown -->
+    <div class="filter-dropdown">
+      <button class="filter-btn active" data-filter="packing">Packing &#9662;</button>
+      <ul class="dropdown-menu">
+        <li data-subfilter="bopp">BOPP
+          <ul>
+            <li data-subfilter="bopp-transparent">Transparent</li>
+            <li data-subfilter="bopp-brown">Brown</li>
+            <li data-subfilter="bopp-milky">Milky</li>
+            <li data-subfilter="bopp-printed">Printed</li>
+            <li data-subfilter="bopp-hotmelt">Hot Melt</li>
+            <li data-subfilter="bopp-rubber">Rubber Based</li>
+          </ul>
+        </li>
+        <li data-subfilter="heavy-duty">Heavy Duty Packing Tape</li>
+        <li data-subfilter="filament">Filament Tape</li>
+        <li data-subfilter="duck">Duck Tape</li>
+        <li data-subfilter="security">Security Tape</li>
+        <li data-subfilter="aluminium">Aluminium Tape</li>
+        <li data-subfilter="paper">Paper Tape</li>
+        <li data-subfilter="paper-reinforcement">Paper Reinforcement</li>
+        <li data-subfilter="butyl">Butyl Tape</li>
+        <li data-subfilter="drywall">Drywall Tape</li>
+      </ul>
     </div>
 
-    <div class="product-card" data-category="double">
-      <img src="images/thin-double.jpg" alt="Thin Double Tape">
-      <h3>Thin Double Side Tape</h3>
-      <p>Clean adhesion for lightweight applications.</p>
+    <!-- Double Side Dropdown -->
+    <div class="filter-dropdown">
+      <button class="filter-btn" data-filter="double">Double Side &#9662;</button>
+      <ul class="dropdown-menu">
+        <li data-subfilter="acrylic-foam">Acrylic Foam Tape</li>
+        <li data-subfilter="tissue">Tissue Tape</li>
+        <li data-subfilter="foam">Foam Tape</li>
+        <li data-subfilter="pvc">PVC Tape</li>
+        <li data-subfilter="pet">PET Tape</li>
+        <li data-subfilter="transfer">Transfer Tape</li>
+      </ul>
     </div>
 
-    <!-- Insulation -->
-    <div class="product-card" data-category="insulation">
-      <img src="images/insulation-tape.jpg" alt="Insulation Tape">
-      <h3>Vinyl Insulation Tape</h3>
-      <p>High electrical resistance for safety and durability.</p>
+    <!-- Insulation Dropdown -->
+    <div class="filter-dropdown">
+      <button class="filter-btn" data-filter="insulation">Insulation &#9662;</button>
+      <ul class="dropdown-menu">
+        <li data-subfilter="kapton">Kapton Adhesive Tapes</li>
+        <li data-subfilter="self-amalgamating">Self Amalgamating Tape</li>
+        <li data-subfilter="self-fusing-rubber">Self Fusing Rubber Tapes</li>
+        <li data-subfilter="nomex">Nomex Adhesive Tapes</li>
+        <li data-subfilter="fiberglass">Fiberglass (Glass Cloth) Tapes</li>
+        <li data-subfilter="polyester-glass">Polyester Glass Tapes</li>
+        <li data-subfilter="polyester">Polyester Tapes</li>
+        <li data-subfilter="rayon">Rayon Fabric Tapes</li>
+        <li data-subfilter="polyester-fleece">Polyester Fleece Tapes</li>
+        <li data-subfilter="cotton">Cotton Fabric Tapes</li>
+        <li data-subfilter="metal-foil">Metal Foil Tapes</li>
+      </ul>
     </div>
 
-    <div class="product-card" data-category="insulation">
-      <img src="images/high-temp-insulation.jpg" alt="High Temp Tape">
-      <h3>High Temperature Insulation Tape</h3>
-      <p>Designed for heat-sensitive environments.</p>
+    <!-- Protection Dropdown -->
+    <div class="filter-dropdown">
+      <button class="filter-btn" data-filter="protection">Protection &#9662;</button>
+      <ul class="dropdown-menu">
+        <li data-subfilter="surface-protection">Surface Protection Tape</li>
+      </ul>
     </div>
 
-    <!-- Protection -->
-    <div class="product-card" data-category="protection">
-      <img src="images/protection-tape.jpg" alt="Protection Tape">
-      <h3>Surface Protection Tape</h3>
-      <p>Guards surfaces during storage or transport.</p>
-    </div>
+  </div>
+</section>
 
-    <div class="product-card" data-category="protection">
-      <img src="images/floor-protection.jpg" alt="Floor Protection Tape">
-      <h3>Floor Protection Tape</h3>
-      <p>Protects floors from scratches and marks.</p>
-    </div>
-  </section>
+<!-- PRODUCT GRID -->
+<section class="product-grid">
+  <!-- Example Products for Packing -->
+  <div class="product-card" data-category="packing" data-subcategory="bopp-transparent">
+    <img src="images/clear-packing.jpg" alt="Clear BOPP Tape">
+    <h3>Clear BOPP Tape</h3>
+    <p>Transparent finish for a neat look.</p>
+  </div>
+  <div class="product-card" data-category="packing" data-subcategory="bopp-brown">
+    <img src="images/packing-tape.jpg" alt="Brown BOPP Tape">
+    <h3>Brown BOPP Tape</h3>
+    <p>Durable tape for heavy-duty sealing.</p>
+  </div>
+  
+  <!-- Example Products for Double Side -->
+  <div class="product-card" data-category="double" data-subcategory="acrylic-foam">
+    <img src="images/double-tape.jpg" alt="Acrylic Foam Tape">
+    <h3>Acrylic Foam Tape</h3>
+    <p>High adhesion foam tape.</p>
+  </div>
+
+  <!-- Example Product for Insulation -->
+  <div class="product-card" data-category="insulation" data-subcategory="kapton">
+    <img src="images/insulation-tape.jpg" alt="Kapton Tape">
+    <h3>Kapton Adhesive Tape</h3>
+    <p>Heat resistant insulation tape.</p>
+  </div>
+
+  <!-- Example Product for Protection -->
+  <div class="product-card" data-category="protection" data-subcategory="surface-protection">
+    <img src="images/protection-tape.jpg" alt="Surface Protection Tape">
+    <h3>Surface Protection Tape</h3>
+    <p>Protects surfaces from scratches and marks.</p>
+  </div>
+</section>
 <script>
-    feather.replace();
+  const filterBtns = document.querySelectorAll('.filter-btn');
+const dropdownButtons = document.querySelectorAll('.filter-dropdown > .filter-btn');
+const dropdownItems = document.querySelectorAll('.dropdown-menu li[data-subfilter]');
+const products = document.querySelectorAll('.product-card');
 
-    // PRODUCT FILTER SCRIPT
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const products = document.querySelectorAll('.product-card');
+// Show first category by default
+function showCategory(category) {
+  products.forEach(p => {
+    p.style.display = (p.dataset.category === category) ? 'block' : 'none';
+  });
+}
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelector('.filter-btn.active').classList.remove('active');
-        btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
+// Show first category on load
+showCategory('packing');
 
-        products.forEach(product => {
-          product.style.display = (filter === 'all' || product.dataset.category === filter)
-            ? 'block'
-            : 'none';
-        });
-      });
+/// Open main dropdown
+dropdownButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const dropdown = btn.nextElementSibling;
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+  });
+});
+
+// Click subcategory (including nested)
+dropdownItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const subcat = item.dataset.subfilter;
+    if (!subcat) return; // skip items without data-subfilter
+
+    products.forEach(p => {
+      p.style.display = (p.dataset.subcategory === subcat) ? 'block' : 'none';
     });
-  </script>
+
+    // Close all dropdowns after selection
+    document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
+  });
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
+});
+
+
+</script>
 
   <!-- ABOUT PAGE CTA SECTION -->
 <section class="about-cta">
@@ -136,7 +205,7 @@
     <!-- Column 1: Logo & Tagline -->
     <div class="footer-logo">
       <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
-      <p>Premium adhesive and packaging solutions for home and industry since 2010.</p>
+      <p>Premium adhesive and packaging solutions for home and industry since 2000.</p>
     </div>
 
     <!-- Column 2: Quick Links -->
@@ -145,16 +214,17 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <!-- Column 3: Contact Info -->
+    <!-- Column 3: Contact Info -->
     <div class="footer-contact">
       <h4>Contact Us</h4>
-      <p><strong>Address:</strong> Plot No. 45, Industrial Estate, Pune, India</p>
-      <p><strong>Email:</strong> support@roshanpackaging.com</p>
+      <p><strong>Address:</strong> G-20, Paresh Industrial Estate, Shankarsheth Road, Pune-411037, India</p>
+      <p><strong>Email:</strong> sales@roshanpackaging.com</p>
       <p><strong>Phone:</strong> +91 9370099995</p>
     </div>
 

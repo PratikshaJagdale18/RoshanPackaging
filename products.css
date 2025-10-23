@@ -104,7 +104,9 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  position: relative;
 }
+
 .filter-btn {
   background: #fff;
   border: 2px solid #ff4d4d;
@@ -115,10 +117,63 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .filter-btn:hover,
 .filter-btn.active {
   background: #ff4d4d;
-  color: white;
+  color: #fff;
+}
+
+/* Dropdown container */
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none; /* hidden by default */
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 100;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 8px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f7f7f7;
+}
+
+/* Nested dropdowns (BOPP subcategories) */
+.dropdown-menu li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* appear to the right of parent */
+  min-width: 180px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 5px 0;
+}
+
+.dropdown-menu li:hover > ul {
+  display: block; /* show nested on hover */
+}
+
+.dropdown-menu li ul li {
+  padding: 6px 16px;
 }
 
 /* PRODUCT GRID */

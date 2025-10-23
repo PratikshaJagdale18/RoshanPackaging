@@ -75,7 +75,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
 }
 
 .hero-section::after {
@@ -83,20 +82,19 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 .hero-content {
     position: relative;
+    z-index: 1;
 }
 
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
+.hero-content h1,
 .hero-content p {
-    font-size: 18px;
+    color: white;
 }
+
 
 /* Contact Section */
 .contact-section {
