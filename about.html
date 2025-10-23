@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - StickyTape Wonderland</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://unpkg.com/feather-icons"></script>
+   
+  <link rel="stylesheet" href="about.css">
+ 
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="brand">
+      <img src="videos/logo.jpg" alt="VFix Logo" class="brand-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<script>const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled'); // sticky full-width
+  } else {
+    navbar.classList.remove('scrolled'); // back to floating
+  }
+});</script>
+
+
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h4>ABOUT US</h4>
+      <h1>Experience <br><span>Speaks for Itself!</span></h1>
+      <p>
+        At Roshan Packaging, we believe every bond tells a story — one of trust, strength, and reliability.
+      </p>
+      <a href="index.html#products" class="btn-primary">Our Products</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Roshan Packaging</h2>
+      <p>
+        At <strong>StickyTape Wonderland</strong>, we specialize in crafting premium adhesive solutions trusted across industries. 
+        Since our inception in 2010, our mission has been to deliver tapes that bond not just materials — but reliability, performance, and trust.
+      </p>
+      <p>
+        With cutting-edge manufacturing processes and eco-conscious design, our tapes are made to perform under the toughest conditions. 
+        From packaging to electrical insulation, StickyTape products ensure durability that sticks with you, always.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/about2.jpg" alt="Our Team">
+    </div>
+  </div>
+</section>
+
+<section class="vision-mission">
+  <div class="overlay">
+    
+
+    <div class="vm-card">
+      <div class="circle-border"></div>
+      <h3>Our Vision</h3>
+      <p>
+        To be the world’s most trusted and innovative adhesive brand,
+        providing sustainable solutions that simplify and strengthen everyday life.
+      </p>
+    </div>
+    <div class="vm-headline">
+      <h2>Our Vision & Mission</h2>
+      <p>
+        We are committed to excellence, innovation, and integrity — 
+        creating sustainable, high-quality adhesive solutions that empower progress.
+      </p>
+    </div>
+
+    <div class="vm-card">
+      <div class="circle-border"></div>
+      <h3>Our Mission</h3>
+      <p>
+        To consistently create high-quality adhesive products through research,
+        innovation, and commitment — ensuring customer satisfaction and environmental responsibility.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Join the Sticky Revolution!</h2>
+  <p>
+    Experience adhesives that combine innovation, reliability, and care. Let’s build something strong together.
+  </p>
+  <button class="btn-primary">Contact Us</button>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <h3>StickyTape Wonderland</h3>
+      <p>Premium adhesive solutions for home and business since 2010.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">Packaging Tape</a></li>
+        <li><a href="#">Double-Sided Tape</a></li>
+        <li><a href="#">Masking Tape</a></li>
+        <li><a href="#">Electrical Tape</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect With Us</h4>
+      <div class="socials">
+        <i data-feather="facebook"></i>
+        <i data-feather="twitter"></i>
+        <i data-feather="instagram"></i>
+        <i data-feather="linkedin"></i>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2023 StickyTape Wonderland. All rights reserved.</p>
+</footer>
+<script src="navbar.js"></script>
+<script>
+  feather.replace();
+</script>
+</body>
+</html>
