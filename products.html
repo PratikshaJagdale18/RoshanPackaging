@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products | Roshan Packaging</title>
+  <link rel="stylesheet" href="products.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="brand">
+      <img src="videos/logo.jpg" alt="VFix Logo" class="brand-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- HERO SECTION -->
+  <section class="product-hero">
+    <div class="hero-content">
+      <h1>Our Product Range</h1>
+      <p>High-performance adhesive and protection solutions for every packaging need.</p>
+    </div>
+  </section>
+
+ <!-- FILTER BUTTONS -->
+  <section class="product-filters">
+    <h2>Explore Our Categories</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="packing">Packing</button>
+      <button class="filter-btn" data-filter="double">Double Side</button>
+      <button class="filter-btn" data-filter="insulation">Insulation</button>
+      <button class="filter-btn" data-filter="protection">Protection</button>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="product-grid">
+    <!-- Packing Products -->
+    <div class="product-card" data-category="packing">
+      <img src="images/packing-tape.jpg" alt="Packing Tape">
+      <h3>Brown Packing Tape</h3>
+      <p>Durable tape ideal for heavy-duty carton sealing.</p>
+    </div>
+
+    <div class="product-card" data-category="packing">
+      <img src="images/clear-packing.jpg" alt="Clear Packing Tape">
+      <h3>Clear Packing Tape</h3>
+      <p>Transparent finish for a neat, professional look.</p>
+    </div>
+
+    <!-- Double Side -->
+    <div class="product-card" data-category="double">
+      <img src="images/double-tape.jpg" alt="Double Tape">
+      <h3>Foam Double Side Tape</h3>
+      <p>Provides extra grip for mounting and crafts.</p>
+    </div>
+
+    <div class="product-card" data-category="double">
+      <img src="images/thin-double.jpg" alt="Thin Double Tape">
+      <h3>Thin Double Side Tape</h3>
+      <p>Clean adhesion for lightweight applications.</p>
+    </div>
+
+    <!-- Insulation -->
+    <div class="product-card" data-category="insulation">
+      <img src="images/insulation-tape.jpg" alt="Insulation Tape">
+      <h3>Vinyl Insulation Tape</h3>
+      <p>High electrical resistance for safety and durability.</p>
+    </div>
+
+    <div class="product-card" data-category="insulation">
+      <img src="images/high-temp-insulation.jpg" alt="High Temp Tape">
+      <h3>High Temperature Insulation Tape</h3>
+      <p>Designed for heat-sensitive environments.</p>
+    </div>
+
+    <!-- Protection -->
+    <div class="product-card" data-category="protection">
+      <img src="images/protection-tape.jpg" alt="Protection Tape">
+      <h3>Surface Protection Tape</h3>
+      <p>Guards surfaces during storage or transport.</p>
+    </div>
+
+    <div class="product-card" data-category="protection">
+      <img src="images/floor-protection.jpg" alt="Floor Protection Tape">
+      <h3>Floor Protection Tape</h3>
+      <p>Protects floors from scratches and marks.</p>
+    </div>
+  </section>
+<script>
+    feather.replace();
+
+    // PRODUCT FILTER SCRIPT
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const products = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        products.forEach(product => {
+          product.style.display = (filter === 'all' || product.dataset.category === filter)
+            ? 'block'
+            : 'none';
+        });
+      });
+    });
+  </script>
+
+  <!-- ABOUT PAGE CTA SECTION -->
+<section class="about-cta">
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2>Let’s Build Strong Bonds Together</h2>
+    <p>From industrial packaging to everyday use — Roshan Packaging delivers adhesive solutions you can trust.</p>
+    <button class="btn-primary">Get in Touch</button>
+  </div>
+</section>
+
+  <footer>
+  <div class="footer-content">
+    
+    <!-- Column 1: Logo & Tagline -->
+    <div class="footer-logo">
+      <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
+      <p>Premium adhesive and packaging solutions for home and industry since 2010.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Address:</strong> Plot No. 45, Industrial Estate, Pune, India</p>
+      <p><strong>Email:</strong> support@roshanpackaging.com</p>
+      <p><strong>Phone:</strong> +91 9370099995</p>
+    </div>
+
+    <!-- Column 4: Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-pill-container">
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.
+    <br>Developed by DW Innovations Pvt. Ltd.
+  </p>
+</footer>
+<script src="navbar.js"></script>
+<script>
+  feather.replace();
+</script>
+<a href="https://wa.me/9371699995" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp Chat" />
+</a>
+</body>
+</html>
