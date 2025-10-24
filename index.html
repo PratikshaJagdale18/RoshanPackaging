@@ -71,11 +71,11 @@ window.addEventListener('scroll', () => {
 </script>
     <!-- Hero Text -->
     <div class="hero-content">
-      <h1>VFix</h1>
-      <p>Premium adhesive solutions that stick with you through thick and thin</p>
+      <h2>Precision in Every Cut, Strength in Every Bond.</h2>
+      <p>"Roshan Packaging delivers high-performance adhesive and die-cut solutions designed for durability and reliability."</p>
       <div class="hero-buttons">
-        <button class="btn-primary">Shop Now</button>
-        <button class="btn-outline">Learn More</button>
+        
+        <a href="about.html"><button class="btn-outline">Learn More</button></a>
       </div>
     </div>
 
@@ -92,8 +92,22 @@ window.addEventListener('scroll', () => {
   <div class="about-container">
     <!-- Image on the left -->
     <div class="about-image">
-      <img src="images/abouthome.jpg" alt="Roshan Packaging Team">
-    </div>
+  <svg viewBox="0 0 600 600" class="blob-border">
+    <path d="M450,300Q450,380,390,430Q330,480,250,470Q170,460,120,400Q70,340,80,260Q90,180,150,130Q210,80,280,90Q350,100,410,150Q450,200,450,300Z"
+      class="outer-stroke"></path>
+
+    <path d="M450,300Q450,380,390,430Q330,480,250,470Q170,460,120,400Q70,340,80,260Q90,180,150,130Q210,80,280,90Q350,100,410,150Q450,200,450,300Z"
+      class="inner-stroke"></path>
+
+    <defs>
+      <clipPath id="blobClip">
+        <path d="M450,300Q450,380,390,430Q330,480,250,470Q170,460,120,400Q70,340,80,260Q90,180,150,130Q210,80,280,90Q350,100,410,150Q450,200,450,300Z" />
+      </clipPath>
+    </defs>
+    <image href="images/abouthome.jpg" clip-path="url(#blobClip)" class="blob-img"/>
+  </svg>
+</div>
+
 
     <!-- Text content on the right -->
     <div class="about-text">
