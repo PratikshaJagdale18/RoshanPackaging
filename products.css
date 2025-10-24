@@ -3,25 +3,27 @@ body {
   font-family: "Segoe UI", sans-serif;
   color: #333;
 }
-/* NAVBAR BASE */
+/* NAVBAR FULL WIDTH */
 .navbar {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;              /* sticks at top */
+  top: 0;
+  left: 0;
+  width: 100%;                  /* covers full width */
   background-color: #fff;
   padding: 1rem 3rem;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
+  border-radius: 0;             /* removes rounded edges */
+  transform: none;              /* remove centering transform */
 }
 
-/* CENTER CONTAINER */
+/* NAVBAR CONTAINER */
 .navbar .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;  /* logo left, links right */
   align-items: center;
-  gap: 4rem;
+  max-width: 1200px;              /* optional for centered content */
+  margin: 0 auto;
 }
 
 /* BRAND LOGO */
@@ -48,7 +50,7 @@ body {
   color: #e07b17;
 }
 
-/* RESPONSIVE (Mobile) */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
@@ -59,36 +61,86 @@ body {
     gap: 1rem;
   }
 }
+
 /* HERO SECTION */
+/* PRODUCT HERO SECTION */
 .product-hero {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   background: url('images/productHero.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* Red angled overlay (same style as about page) */
 .product-hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    rgba(179, 0, 0, 0.6) 60%, 
+    rgba(179, 0, 0, 0) 61%
+  );
+  z-index: 1;
 }
+
+/* Hero content */
 .product-hero .hero-content {
   position: relative;
   z-index: 2;
+  color: #fff;
+  max-width: 600px;
+  margin-left: 5%;
 }
+
 .product-hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
+
 .product-hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  max-width: 450px;
+  color: #ffcccc;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-hero {
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .product-hero::before {
+    width: 100%;
+    background: rgba(179, 0, 0, 0.85);
+    clip-path: none;
+  }
+
+  .product-hero .hero-content {
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+
+  .product-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .product-hero p {
+    font-size: 1rem;
+  }
+}
+
 
 /* FILTER BUTTONS */
 .product-filters {
@@ -214,7 +266,7 @@ body {
 /* ABOUT PAGE CTA SECTION */
 .about-cta {
   position: relative;
-  height: 70vh;
+  height: 50vh;
   background: url('images/cta.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;

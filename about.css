@@ -3,25 +3,27 @@ body {
   font-family: "Segoe UI", sans-serif;
   color: #333;
 }
-/* NAVBAR BASE */
+/* NAVBAR FULL WIDTH */
 .navbar {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;              /* sticks at top */
+  top: 0;
+  left: 0;
+  width: 100%;                  /* covers full width */
   background-color: #fff;
   padding: 1rem 3rem;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
+  border-radius: 0;             /* removes rounded edges */
+  transform: none;              /* remove centering transform */
 }
 
-/* CENTER CONTAINER */
+/* NAVBAR CONTAINER */
 .navbar .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;  /* logo left, links right */
   align-items: center;
-  gap: 4rem;
+  max-width: 1200px;              /* optional for centered content */
+  margin: 0 auto;
 }
 
 /* BRAND LOGO */
@@ -48,7 +50,7 @@ body {
   color: #e07b17;
 }
 
-/* RESPONSIVE (Mobile) */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
@@ -59,6 +61,7 @@ body {
     gap: 1rem;
   }
 }
+
 /* HERO SECTION */
 .about-hero {
   position: relative;
@@ -199,7 +202,7 @@ body {
   padding: 100px 20px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 10px;
   align-items: stretch; /* stretch cards to same height */
   justify-content: center;
 }
@@ -290,43 +293,37 @@ body {
   color: #f0f0f0;
 }
 
-/* Align Vision to left (odd cards) */
+/* Align Vision to left (odd cards) with hollow arrow */
 .vision-mission-section .vm-card:nth-child(odd) {
   margin-right: auto;
   clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%); /* arrow right */
+  padding-left: 40px;      /* default left padding */
+  padding-right: 80px;     /* push text inward from arrow */
 }
 
-/* Align Mission to right (even cards) */
+/* Align Mission to right (even cards) with hollow arrow */
 .vision-mission-section .vm-card:nth-child(even) {
   margin-left: auto;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%); /* arrow left */
+  padding-left: 80px;      /* push text inward from arrow */
+  padding-right: 40px;     /* default right padding */
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .vm-card {
-    width: 70%;
-  }
+/* Optional: Ensure text never overlaps arrow */
+.vm-content {
+  flex: 1;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
 }
 
+/* For mobile, remove clip-path and padding adjustments */
 @media (max-width: 768px) {
   .vm-card {
-    flex-direction: column;
-    text-align: center;
     clip-path: none;
-    border-radius: 10px;
-    width: 90%;
-    min-height: auto;
-    padding: 30px 20px;
-    margin: 0 auto;
-  }
-
-  .vm-icon {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .vm-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -338,7 +335,7 @@ body {
 /* ABOUT PAGE CTA SECTION */
 .about-cta {
   position: relative;
-  height: 70vh;
+  height: 50vh;
   background: url('images/cta.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;

@@ -25,24 +25,27 @@ body {
   background: rgba(100, 0, 0, 0.3);
 }
 /* NAVBAR BASE */
+/* NAVBAR FULL WIDTH */
 .navbar {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;              /* sticks at top */
+  top: 0;
+  left: 0;
+  width: 100%;                  /* covers full width */
   background-color: #fff;
   padding: 1rem 3rem;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
+  border-radius: 0;             /* removes rounded edges */
+  transform: none;              /* remove centering transform */
 }
 
-/* CENTER CONTAINER */
+/* NAVBAR CONTAINER */
 .navbar .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;  /* logo left, links right */
   align-items: center;
-  gap: 4rem;
+  max-width: 1200px;              /* optional for centered content */
+  margin: 0 auto;
 }
 
 /* BRAND LOGO */
@@ -69,7 +72,7 @@ body {
   color: #e07b17;
 }
 
-/* RESPONSIVE (Mobile) */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
@@ -80,7 +83,6 @@ body {
     gap: 1rem;
   }
 }
-
 
 
 
@@ -154,6 +156,72 @@ body {
 .indicator:hover {
   background: white;
 }
+/* ABOUT US SECTION */
+.about-us {
+  padding: 100px 8%;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #a00000;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image, .about-text {
+    min-width: 100%;
+  }
+  .about-text h2 {
+    font-size: 32px;
+  }
+}
 
 .why-choose-us {
   padding: 100px 8%;
@@ -163,9 +231,9 @@ body {
 
 .content {
   display: flex;
-  align-items: center; /* vertically centers image and text */
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap; /* keeps them side by side */
+  flex-wrap: nowrap;
   gap: 80px;
 }
 
@@ -174,19 +242,19 @@ body {
   min-width: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically centers text content */
+  justify-content: center;
 }
 
 .text-block h2 {
   font-size: 38px;
-  color: #111;
+  color: #a00000;
   margin-bottom: 60px;
 }
 
 .reasons {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
   position: relative;
 }
 
@@ -196,6 +264,16 @@ body {
   max-width: 480px;
 }
 
+/* Zig-zag (criss-cross) arrangement */
+.reason:nth-child(even) {
+  align-self: flex-end;
+}
+
+.reason:nth-child(odd) {
+  align-self: flex-start;
+}
+
+/* Card styling */
 .reason-card {
   background: #fff;
   border-radius: 12px;
@@ -203,6 +281,12 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
   position: relative;
   z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .reason-card p {
@@ -213,7 +297,7 @@ body {
   margin-left: 4px;
 }
 
-/* Number box overlapping the white card */
+/* Number box */
 .number-box {
   position: absolute;
   top: -25px;
@@ -227,21 +311,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
 
-.number-box.teal,
-.number-box.orange {
-  background: #d01313;
-}
+/* Color variations */
+.number-box.teal { background: #009688; }
+.number-box.orange { background: #fb8c00; }
+.number-box.red { background: #e53935; }
+.number-box.blue { background: #1e88e5; }
 
 /* Image block styling */
 .image-block {
   flex: 1;
   min-width: 420px;
   display: flex;
-  align-items: center; /* ensures image aligns vertically with text */
+  align-items: center;
   justify-content: center;
   border-radius: 200px 0 0 200px;
   overflow: hidden;
@@ -249,7 +334,7 @@ body {
 
 .image-block img {
   width: 100%;
-  height: auto; /* prevents image stretching */
+  height: auto;
   border-radius: 200px 0 0 200px;
   object-fit: cover;
 }
@@ -261,14 +346,26 @@ body {
     align-items: center;
     text-align: center;
   }
-  .image-block {
-    border-radius: 50px;
+
+  .reasons {
+    gap: 50px;
   }
+
   .reason {
+    align-self: center !important;
     max-width: 100%;
   }
-}
 
+  .image-block {
+    border-radius: 50px;
+    margin-top: 40px;
+  }
+
+  .number-box {
+    top: -20px;
+    left: -20px;
+  }
+}
 
 /* PRODUCTS */
 .products {
@@ -403,7 +500,7 @@ body {
 /* ABOUT PAGE CTA SECTION */
 .about-cta {
   position: relative;
-  height: 70vh;
+  height: 50vh;
   background: url('images/cta.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;

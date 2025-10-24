@@ -27,12 +27,13 @@
 </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Contact Us</h1>
-            <p>Reach out to our packaging experts today</p>
-        </div>
-    </section>
+<section class="contact-hero">
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+    <p>Reach out to our packaging experts today</p>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section class="contact-section">
@@ -62,11 +63,13 @@
             </div>
 
           <!-- Contact Form -->
-<div class="contact-form">
-    <h3>Send Us a Message</h3>
-    <form id="contactForm" action="https://formsubmit.co/sales@roshanpackaging.com" method="POST">
-        
-        <!-- Disable captcha if you want -->
+<section class="contact-section">
+  <div class="contact-container">
+    
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form id="contactForm" action="https://formsubmit.co/sales@roshanpackaging.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
 
         <input type="text" name="name" placeholder="Your Name" required>
@@ -75,33 +78,35 @@
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
-    </form>
-    <p id="formMessage" style="margin-top:10px;"></p>
-</div>
+      </form>
+      <p id="formMessage" style="margin-top:10px;"></p>
+    </div>
 
-<script>
-    const form = document.getElementById('contactForm');
-    const message = document.getElementById('formMessage');
-
-    form.addEventListener('submit', function(event) {
-        message.textContent = 'Sending...';
-        setTimeout(() => {
-            message.textContent = 'Your message has been sent successfully!';
-        }, 1500);
-    });
-</script>
-
-        </div>
-    </section>
     <!-- Google Map -->
-<div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.6013745743644!2d73.8721808749625!3d18.50170698258817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0165fdcc5e7%3A0x90f1711273ce865f!2sRoshan%20Packaging!5e0!3m2!1sen!2sin!4v1761220493085!5m2!1sen!2sin" 
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.6013745743644!2d73.8721808749625!3d18.50170698258817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0165fdcc5e7%3A0x90f1711273ce865f!2sRoshan%20Packaging!5e0!3m2!1sen!2sin!4v1761220493085!5m2!1sen!2sin"
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+      </iframe>
+    </div>
+
+  </div>
+</section>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const message = document.getElementById('formMessage');
+
+  form.addEventListener('submit', function(event) {
+    message.textContent = 'Sending...';
+    setTimeout(() => {
+      message.textContent = 'Your message has been sent successfully!';
+    }, 1500);
+  });
+</script>
 
 <footer>
   <div class="footer-content">
@@ -110,10 +115,19 @@
     <div class="footer-logo">
       <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
       <p>Premium adhesive and packaging solutions for home and industry since 2000.</p>
+      <div class="footer-social">
+   
+      <div class="social-pill-container">
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
     </div>
 
     <!-- Column 2: Quick Links -->
-   <div class="footer-links">
+    <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -122,8 +136,16 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Column 3: Contact Info -->
+    <!-- Column 4: Products -->
+<div class="footer-links">
+      <h4>Our Products</h4>
+      <ul>
+        <li><a href="products.html">Packaging Tape</a></li>
+        <li><a href="products.html">Insulation Tape</a></li>
+        <li><a href="products.html">Double-Sided Tape</a></li>
+        <li><a href="products.html">Protection Tape</a></li>
+      </ul>
+    </div>
     <!-- Column 3: Contact Info -->
     <div class="footer-contact">
       <h4>Contact Us</h4>
@@ -131,23 +153,17 @@
       <p><strong>Email:</strong> sales@roshanpackaging.com</p>
       <p><strong>Phone:</strong> +91 9370099995</p>
     </div>
-    <!-- Column 4: Social Media -->
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-pill-container">
-        <a href="#"><i data-feather="facebook"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="linkedin"></i></a>
-      </div>
-    </div>
+
+
+
+    
 
   </div>
 
-  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.
-    <br>Developed by DW Innovations Pvt. Ltd.
-  </p>
+  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovations Pvt. Ltd.</p>
 </footer>
+
+
 
 
 <a href="https://wa.me/9371699995" 

@@ -24,13 +24,14 @@
   </div>
 </nav>
 
-  <!-- HERO SECTION -->
-  <section class="product-hero">
-    <div class="hero-content">
-      <h1>Our Product Range</h1>
-      <p>High-performance adhesive and protection solutions for every packaging need.</p>
-    </div>
-  </section>
+ <!-- HERO SECTION -->
+<section class="product-hero">
+  <div class="hero-content">
+    <h1>Our Product Range</h1>
+    <p>High-performance adhesive and protection solutions for every packaging need.</p>
+  </div>
+</section>
+
 
 <!-- FILTER BUTTONS -->
 <section class="product-filters">
@@ -199,13 +200,22 @@ document.addEventListener('click', () => {
   </div>
 </section>
 
-  <footer>
+ <footer>
   <div class="footer-content">
     
     <!-- Column 1: Logo & Tagline -->
     <div class="footer-logo">
       <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
       <p>Premium adhesive and packaging solutions for home and industry since 2000.</p>
+      <div class="footer-social">
+      
+      <div class="social-pill-container">
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="linkedin"></i></a>
+      </div>
+    </div>
     </div>
 
     <!-- Column 2: Quick Links -->
@@ -218,8 +228,16 @@ document.addEventListener('click', () => {
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Column 3: Contact Info -->
+    <!-- Column 4: Products -->
+<div class="footer-links">
+      <h4>Our Products</h4>
+      <ul>
+        <li><a href="products.html">Packaging Tape</a></li>
+        <li><a href="products.html">Insulation Tape</a></li>
+        <li><a href="products.html">Double-Sided Tape</a></li>
+        <li><a href="products.html">Protection Tape</a></li>
+      </ul>
+    </div>
     <!-- Column 3: Contact Info -->
     <div class="footer-contact">
       <h4>Contact Us</h4>
@@ -228,23 +246,16 @@ document.addEventListener('click', () => {
       <p><strong>Phone:</strong> +91 9370099995</p>
     </div>
 
-    <!-- Column 4: Social Media -->
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-pill-container">
-        <a href="#"><i data-feather="facebook"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="linkedin"></i></a>
-      </div>
-    </div>
+
+
+    
 
   </div>
 
-  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.
-    <br>Developed by DW Innovations Pvt. Ltd.
-  </p>
+  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovations Pvt. Ltd.</p>
 </footer>
+
+
 <script src="navbar.js"></script>
 <script>
   feather.replace();
