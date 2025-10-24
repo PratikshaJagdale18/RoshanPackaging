@@ -21,7 +21,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 60%;
+  width: 65%;
   height: 100%;
   background: linear-gradient(
     135deg, 
@@ -57,7 +57,7 @@ body {
 
 .navbar .nav-links li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: 700;
   font-size: 17px;
   transition: color 0.3s ease;
@@ -145,7 +145,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 60%;
+  width: 65%;
   height: 100%;
     background: linear-gradient(
     135deg, 
@@ -248,7 +248,7 @@ body {
 }
 .about-text h2 {
   color: #000;
-  font-size: 40 px ;
+  font-size: 40px ;
   margin-bottom: 20px;
 }
 .about-text p {
@@ -276,7 +276,7 @@ body {
 .subtitle {
   color: #000 ;
   
-  font-size:40 px;
+  font-size:40px;
 }
 
 
@@ -397,7 +397,7 @@ body {
 .about-cta {
   position: relative;
   height: 50vh;
-  background: url('images/cta.jpg') no-repeat center center/cover;
+  background: url('images/cta.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
