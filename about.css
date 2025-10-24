@@ -1,41 +1,44 @@
+
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Saira", sans-serif;
   color: #333;
 }
-/* NAVBAR FULL WIDTH */
+/* Navbar */
 .navbar {
-  position: fixed;              /* sticks at top */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;                  /* covers full width */
+  width: 100%;
   background-color: #fff;
   padding: 1rem 3rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
-  border-radius: 0;             /* removes rounded edges */
-  transform: none;              /* remove centering transform */
+ font-family: "Arimo", sans-serif;
 }
 
-/* NAVBAR CONTAINER */
+/* Navbar container */
 .navbar .container {
   display: flex;
-  justify-content: space-between;  /* logo left, links right */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;              /* optional for centered content */
+  max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-/* BRAND LOGO */
+/* Brand logo */
 .navbar .brand-logo {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
-/* NAV LINKS */
+/* Center nav links */
 .navbar .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center;
+  flex: 1;
   gap: 2rem;
 }
 
@@ -50,15 +53,64 @@ body {
   color: #e07b17;
 }
 
-/* RESPONSIVE */
+/* Search Bar */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-search input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.nav-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d01313;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-search button i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.nav-search button:hover {
+  background-color: #a50e0e;
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
+
   .navbar .nav-links {
     flex-direction: column;
+    width: 100%;
+    text-align: center;
     gap: 1rem;
+  }
+
+  .nav-search {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-search input {
+    width: 60%;
   }
 }
 
@@ -181,8 +233,8 @@ body {
   min-width: 300px;
 }
 .about-text h2 {
-  color: #a00000;
-  font-size: 40px;
+  color: #000;
+  font-size: 40 px ;
   margin-bottom: 20px;
 }
 .about-text p {
@@ -196,137 +248,132 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Section Container */
-.vision-mission-section {
-  background: #f7f7f7;
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: stretch; /* stretch cards to same height */
-  justify-content: center;
-}
+/* Mission Vission Section  */
 
-/* Headline Style */
-.vm-headline {
+.mission-vision-container {
+  max-width: 1600px;
+  margin: 0 auto;
   text-align: center;
-  max-width: 800px;
-   margin: 0 auto 60px auto; 
-  margin-bottom: 60px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
 }
 
-.vm-headline h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #a00000; /* brand color */
-  margin-bottom: 15px; 
+
+.subtitle {
+  color: #000 ;
+  
+  font-size:40 px;
+}
+
+
+.content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.card {
+  flex: 1 1 300px;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 350px;
+}
+
+.vision {
+  background-color: #8B1C13 ;
+  text-align: left;
+  height: 50%;
+}
+
+.mission {
+  background-color: #8B1C13 ;
+  text-align: left;
+  height: 50%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
   
 }
 
-.vm-headline p {
+.card p {
   font-size: 18px;
-  color: #555;
   line-height: 1.5;
+  color: #e4e4e4;
+ 
 }
 
-/* Each Card */
-.vm-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  width: 55%;           /* slightly narrower for edge alignment */
-  max-width: 650px;
-  min-height: 250px;    /* equal height */
-  padding: 30px 40px;
-  border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    @media (max-width: 1024px) {
+      .subtitle {
+        font-size: 36px;
+      }
 
-/* Hover Effect */
-.vm-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
+      .card h2 {
+        font-size: 28px;
+      }
 
-/* Color Variants */
-.blue-card {
-  background-color: #d01313;
-}
+      .card p {
+        font-size: 16px;
+      }
+    }
 
-.teal-card {
-  background-color: #d01313;
-}
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
 
-/* Icon Style */
-.vm-icon {
-  flex: 0 0 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-}
+      .card {
+        width: 100%;
+        margin-bottom: 20px;
+        min-height: auto;
+      }
+      .card.image {
+        display: none;
+      }
+    }
 
-.vm-icon img {
-  width: 80px;
-  height: 80px;
-  filter: brightness(0) invert(1); /* make white */
-}
+    @media (max-width: 480px) {
+      .subtitle {
+        font-size: 28px;
+      }
 
-/* Text Content */
-.vm-content {
-  flex: 1;
-  text-align: left;
-}
+      .card h2 {
+        font-size: 24px;
+      }
 
-.vm-content h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: #fff;
-}
+      .card p {
+        font-size: 15px;
+      }
 
-.vm-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #f0f0f0;
-}
+      .card {
+        padding: 20px;
+      }
+    }
 
-/* Align Vision to left (odd cards) with hollow arrow */
-.vision-mission-section .vm-card:nth-child(odd) {
-  margin-right: auto;
-  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%); /* arrow right */
-  padding-left: 40px;      /* default left padding */
-  padding-right: 80px;     /* push text inward from arrow */
-}
+    @media (max-width: 360px) {
+      .subtitle {
+        font-size: 24px;
+      }
 
-/* Align Mission to right (even cards) with hollow arrow */
-.vision-mission-section .vm-card:nth-child(even) {
-  margin-left: auto;
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%); /* arrow left */
-  padding-left: 80px;      /* push text inward from arrow */
-  padding-right: 40px;     /* default right padding */
-}
+      .card h2 {
+        font-size: 20px;
+      }
 
-/* Optional: Ensure text never overlaps arrow */
-.vm-content {
-  flex: 1;
-  text-align: left;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* For mobile, remove clip-path and padding adjustments */
-@media (max-width: 768px) {
-  .vm-card {
-    clip-path: none;
-    padding-left: 30px;
-    padding-right: 30px;
-    flex-direction: column;
-    text-align: center;
-  }
-}
+      .card p {
+        font-size: 14px;
+      }
+    }
 
 /* Highlight active link in navbar */
 .nav-links .active-link {

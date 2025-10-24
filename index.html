@@ -6,7 +6,12 @@
   <title>Roshan Packaging - Premium Adhesive Solutions</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://unpkg.com/feather-icons"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -21,24 +26,33 @@
     <video autoplay muted loop class="video-slide">
       <source src="videos/video3.mp4" type="video/mp4">
     </video>
-    <!-- <video autoplay muted loop class="video-slide">
-      <source src="videos/hero4.mp4" type="video/mp4">
-    </video> -->
+    <video autoplay muted loop class="video-slide">
+      <source src="videos/video4.mp4" type="video/mp4">
+    </video>
 
     <div class="overlay"></div>
 
 <!-- Navbar -->
 <nav class="navbar">
   <div class="container">
+    <!-- Brand Logo -->
     <a href="#" class="brand">
       <img src="videos/logo.jpg" alt="VFix Logo" class="brand-logo">
     </a>
+
+    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Products</a></li>
+      <li><a href="products.html">Product</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
+    <!-- Search Bar -->
+    <div class="nav-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
   </div>
 </nav>
 
@@ -97,6 +111,44 @@ window.addEventListener('scroll', () => {
   </div>
 </section>
 
+  <!-- Products -->
+  <section class="products">
+    <h2>Our Tape Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/packaging.jpeg" alt="Packaging Tape">
+        <div class="card-body">
+          <h3>Packaging Tape</h3>
+          <p>Perfect for sealing boxes with superior strength.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/doublesided.jpeg" alt="Double-Sided Tape">
+        <div class="card-body">
+          <h3>Double-Sided Tape</h3>
+          <p>Invisible bonding for craft and decoration for occasions.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/insulation.jpeg" alt="Masking Tape">
+        <div class="card-body">
+          <h3>Insulation Tape</h3>
+          <p>Clean removal without residue for painting projects.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/protection.jpeg" alt="Electrical Tape">
+        <div class="card-body">
+          <h3>Protection Tape</h3>
+          <p>Insulating properties for electrical applications.</p>
+          <button>View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Why Choose Us -->
 <section class="why-choose-us">
@@ -144,44 +196,6 @@ window.addEventListener('scroll', () => {
 
 
 
-  <!-- Products -->
-  <section class="products">
-    <h2>Our Tape Collection</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/packaging.jpeg" alt="Packaging Tape">
-        <div class="card-body">
-          <h3>Packaging Tape</h3>
-          <p>Perfect for sealing boxes with superior strength.</p>
-          <button>View Details</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/doublesided.jpeg" alt="Double-Sided Tape">
-        <div class="card-body">
-          <h3>Double-Sided Tape</h3>
-          <p>Invisible bonding for craft and decoration for occasions.</p>
-          <button>View Details</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/insulation.jpeg" alt="Masking Tape">
-        <div class="card-body">
-          <h3>Insulation Tape</h3>
-          <p>Clean removal without residue for painting projects.</p>
-          <button>View Details</button>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/protection.jpeg" alt="Electrical Tape">
-        <div class="card-body">
-          <h3>Protection Tape</h3>
-          <p>Insulating properties for electrical applications.</p>
-          <button>View Details</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Testimonials -->
   <section class="testimonials">
@@ -289,7 +303,7 @@ window.addEventListener('scroll', () => {
 
   </div>
 
-  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovations Pvt. Ltd.</p>
+  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovation Pvt. Ltd.</p>
 </footer>
 
 

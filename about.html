@@ -6,7 +6,11 @@
   <title>About Us - Roshan Packaging</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://unpkg.com/feather-icons"></script>
-   
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="about.css">
  
 </head>
@@ -15,17 +19,28 @@
 <!-- Navbar -->
 <nav class="navbar">
   <div class="container">
+    <!-- Brand Logo -->
     <a href="#" class="brand">
       <img src="videos/logo.jpg" alt="VFix Logo" class="brand-logo">
     </a>
+
+    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Products</a></li>
+      <li><a href="products.html">Product</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
+    <!-- Search Bar -->
+    <div class="nav-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
   </div>
 </nav>
+
+
 
 
 <script>const navbar = document.querySelector('.navbar');
@@ -78,37 +93,74 @@ Over the years, Roshan Packaging has become a trusted partner to businesses acro
   </div>
 </section>
 
-<section class="vision-mission-section">
-    <div class="vm-headline">
-    <h2>Our Vision & Mission</h2>
-    
-  </div>
+<!-- Mission Vission Section -->
 
-  <div class="vm-card blue-card">
-    <div class="vm-icon">
+  <div class="mission-vision-container">
+    <h1 class="subtitle">Our Mission And Vision</h1>
+    <!-- <p class="title">At Suthar Ramchandra Jaiswal Tech Pvt. Ltd., we blend traditional craftsmanship with modern innovation to deliver high-precision, reliable machines.</p> -->
 
-    </div>
-    <div class="vm-content">
-      <h3>Vision</h3>
-      <p>
-        To be the preferred adhesive solutions partner by empowering our customers with reliable, innovative, and high-performance self-adhesive tapes that add value to their business and help them achieve operational excellence.
-      </p>
+    <div class="content">
+      <div class="card vision">
+        <h2>Our Vision</h2>
+        <p>
+          
+
+To be the preferred adhesive solutions partner by empowering our customers with reliable, innovative, and high-performance self-adhesive
+ tapes that add value to their business and help them achieve operational excellence.
+        </p>
+      </div>
+
+      <div class="card image">
+        <img src="images/p3.jpeg" alt="Doctor Team" />
+      </div>
+
+      <div class="card mission">
+        <h2>Our Mission</h2>
+        <p>At Roshan Packaging, our mission is to provide high-quality, reliable, and customized adhesive solutions that empower our customers to enhance their productivity and efficiency. We are dedicated to delivering consistent performance, timely service, and innovative products through advanced manufacturing practices — 
+          building long-term partnerships based on trust, transparency, and mutual growth.
+        </p>
+      </div>
     </div>
   </div>
+  <script>
+    //Script
+// mission Vision Section
 
-  <div class="vm-card teal-card">
-    <div class="vm-icon">
-      
-    </div>
-    <div class="vm-content">
-      <h3>Mission</h3>
-      <p>
-        At Roshan Packaging, our mission is to provide high-quality, reliable, and customized adhesive solutions that empower our customers to enhance their productivity and efficiency. We are dedicated to delivering consistent performance, timely service, and innovative products through advanced manufacturing practices —
-        building long-term partnerships based on trust, transparency, and mutual growth
-      </p>
-    </div>
-  </div>
-</section>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".vision", {
+  scrollTrigger: {
+    trigger: ".vision",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1
+});
+
+gsap.from(".image", {
+  scrollTrigger: {
+    trigger: ".image",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  scale: 0.8,
+  opacity: 0,
+  duration: 1
+});
+
+gsap.from(".mission", {
+  scrollTrigger: {
+    trigger: ".mission",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1
+});
+  </script>
 
 
 
@@ -177,7 +229,7 @@ Over the years, Roshan Packaging has become a trusted partner to businesses acro
 
   </div>
 
-  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovations Pvt. Ltd.</p>
+  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovation Pvt. Ltd.</p>
 </footer>
 
 
