@@ -35,7 +35,21 @@ body {
   padding: 1rem 3rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
-  font-family: "Arimo", sans-serif; 
+ font-family: "Arimo", sans-serif;
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    rgba(179, 0, 0, 0.9) 88%, 
+    rgba(179, 0, 0, 0) 89%
+  );
+  z-index: -1;
 }
 
 /* Navbar container */
@@ -66,6 +80,7 @@ body {
 .navbar .nav-links li a {
   text-decoration: none;
   color: #000;
+  font-size: 17px;
   font-weight: 700;
   transition: color 0.3s ease;
 }
@@ -226,19 +241,23 @@ body {
 .about-image {
   flex: 1;
   min-width: 400px;
+  max-width: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 20px;
+  overflow: visible;
 }
 
 .about-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 150px 0px 150px 0px; /* Top-left & Bottom-right rounded */
+  transform: scale(1.03);
 }
+
+
+
 
 .about-text {
   flex: 1;

@@ -16,53 +16,20 @@ body {
   z-index: 1000;
  font-family: "Arimo", sans-serif;
 }
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* make it transparent to show overlay */
-  padding: 1rem 3rem;
-  box-shadow: none; /* remove box shadow */
-  z-index: 1000;
-  font-family: "Arimo", sans-serif;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Navbar becomes solid when scrolled */
-.navbar.scrolled {
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* HERO SECTION */
-.about-hero {
-  position: relative;
-  height: 100vh; /* full height including navbar area */
-  background: url('images/aboutHero.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-/* Red angled overlay */
-.about-hero::before {
+.navbar::before {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 60%;
   height: 100%;
   background: linear-gradient(
     135deg, 
-    rgba(179, 0, 0, 0.7) 60%,  
-    rgba(179, 0, 0, 0) 61%
+    rgba(179, 0, 0, 0.9) 88%, 
+    rgba(179, 0, 0, 0) 89%
   );
-  z-index: 1;
+  z-index: -1;
 }
-
 /* Navbar container */
 .navbar .container {
   display: flex;
@@ -92,6 +59,7 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: 700;
+  font-size: 17px;
   transition: color 0.3s ease;
 }
 
