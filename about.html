@@ -11,34 +11,79 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="about.css">
+   <!-- Correct Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
  
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar">
-  <div class="container">
-    <!-- Brand Logo -->
-    <a href="#" class="brand">
-      <img src="videos/logo.jpg" alt="VFix Logo" class="brand-logo">
-    </a>
+  <nav class="navbar">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="brand-logo">
+        <span class="brand-text">Roshan Packaging</span>
+      </a>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Product</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <!-- Hamburger Icon (Mobile Only) -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <!-- Search Bar -->
-    <div class="nav-search">
-      <input type="text" placeholder="Search...">
-      <button type="submit"><i class="fas fa-search"></i></button>
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="products.html" class="dropdown-toggle" id="productToggle">Product <i
+              class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Double-Sided Tape</a></li>
+            <li><a href="#">Insulation Tape</a></li>
+            <li><a href="#">Packaging Tape</a></li>
+            <li><a href="#">Protection Tape</a></li>
+            <li><a href="#">Safety Tape</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <script>
+    // Toggle mobile menu open/close
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // Product dropdown for mobile
+    const productToggle = document.getElementById('productToggle');
+    const dropdown = productToggle.parentElement;
+
+    productToggle.addEventListener('click', (e) => {
+      // Prevent normal link on mobile
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      }
+    });
+  </script>
 
 
 
@@ -55,9 +100,9 @@ window.addEventListener('scroll', () => {
 
 
 <!-- HERO SECTION -->
-<section class="about-hero">
-  <div class="hero-overlay">
-    <div class="hero-text">
+<section class="about-hero-about">
+  <div class="hero-overlay-about">
+    <div class="hero-text-about">
       <h4>ABOUT US</h4>
       <h1>Experience <br><span>Speaks for Itself!</span></h1>
       <p>
@@ -111,7 +156,7 @@ To be the preferred adhesive solutions partner by empowering our customers with 
       </div>
 
       <div class="card image">
-        <img src="images/p3.jpeg" alt="Doctor Team" />
+        <img src="images/aboutus.jpg" alt="Doctor Team" />
       </div>
 
       <div class="card mission">
@@ -176,73 +221,78 @@ gsap.from(".mission", {
 </section>
 
 
- <!-- Footer -->
-<footer>
-  <div class="footer-content">
-    
-    <!-- Column 1: Logo & Tagline -->
-    <div class="footer-logo">
-      <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
-      <p>Premium adhesive and packaging solutions for home and industry since 2000.</p>
-      <div class="footer-social">
-      
-      <div class="social-pill-container">
-        <a href="#"><i data-feather="facebook"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="linkedin"></i></a>
+<!-- Footer  -->
+
+  <footer>
+    <div class="footer-content">
+
+      <!-- Column 1: Logo & Tagline -->
+      <div class="footer-logo">
+        <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
+        <p>Premium adhesive and packaging solutions for home and industry since 2000.</p>
+        <div class="footer-social">
+
+          <div class="social-pill-container">
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="linkedin"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Column 4: Products -->
+      <div class="footer-links">
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="products.html">Packaging Tape</a></li>
+          <li><a href="products.html">Insulation Tape</a></li>
+          <li><a href="products.html">Double-Sided Tape</a></li>
+          <li><a href="products.html">Protection Tape</a></li>
+          <li><a href="products.html">Safty Tape</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Address:</strong> G-20, Paresh Industrial Estate, Shankarsheth Road, Pune-411037, India</p>
+        <p><strong>Email:</strong> sales@roshanpackaging.com</p>
+        <p><strong>Phone:</strong> +91 9370099995 </p>
+        <p><strong>Phone:</strong> +91 7385190995</p>
+      </div>
+
+
+
+
+
     </div>
-    </div>
 
-    <!-- Column 2: Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <!-- Column 4: Products -->
-<div class="footer-links">
-      <h4>Our Products</h4>
-      <ul>
-        <li><a href="products.html">Packaging Tape</a></li>
-        <li><a href="products.html">Insulation Tape</a></li>
-        <li><a href="products.html">Double-Sided Tape</a></li>
-        <li><a href="products.html">Protection Tape</a></li>
-      </ul>
-    </div>
-    <!-- Column 3: Contact Info -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Address:</strong> G-20, Paresh Industrial Estate, Shankarsheth Road, Pune-411037, India</p>
-      <p><strong>Email:</strong> sales@roshanpackaging.com</p>
-      <p><strong>Phone:</strong> +91 9370099995</p>
-    </div>
+    <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved. <br>Developed by DW Innovation Pvt. Ltd.
+    </p>
+  </footer>
 
 
 
-    
 
-  </div>
+  <a href="https://wa.me/7385190995" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+  <script>
+    feather.replace();
+  </script>
 
-  <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved.  <br>Developed by DW Innovation Pvt. Ltd.</p>
-</footer>
-
-
-<script src="navbar.js"></script>
-<script>
-  feather.replace();
-</script>
-<a href="https://wa.me/9371699995" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Chat with us on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-       alt="WhatsApp Chat" />
-</a>
+  <!-- Product Data and Search Scripts -->
+  <script src="product-data.js"></script>
+  <script src="search.js"></script>
 </body>
 </html>
